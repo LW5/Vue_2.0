@@ -1,8 +1,10 @@
 <template>
-    <el-container>
-  <el-header>
 
-       <el-menu  mode="horizontal" @select="handleSelect"  background-color="#545c64"  text-color="#fff">
+
+<el-container>
+    
+  <el-header>
+    <el-menu  mode="horizontal" @select="handleSelect">
   <el-menu-item index="1">处理中心</el-menu-item>
    <el-menu-item index="4" disabled>2018-07-20</el-menu-item>
   <el-submenu index="2">
@@ -27,10 +29,11 @@
 <div class="line"></div>
 
   </el-header>
-  <el-container>
-    <el-aside width="200px" class="bac" >
 
-<el-row class="tac">
+
+    <el-aside width="200px" >
+
+        <el-row class="tac">
   <el-col >
    
     <el-menu
@@ -41,26 +44,25 @@
       <i class="el-icon-location"></i>
       <span slot="title">商品管理</span>
     </template>
-    <el-menu router mode="horizontal">
     <el-menu-item-group>
-      <el-menu-item index="/Info/Pet">宠物</el-menu-item>
-      <el-menu-item index="/Info/Foods">食品</el-menu-item>
-      <el-menu-item index="/Info/Artical">用品</el-menu-item>
-      <el-menu-item index="/Info/Services">服务</el-menu-item>
+      <el-menu-item index="1-1">宠物</el-menu-item>
+      <el-menu-item index="1-2">食品</el-menu-item>
+      <el-menu-item index="1-3">用品</el-menu-item>
+      <el-menu-item index="1-4">服务</el-menu-item>
     </el-menu-item-group>
-   </el-menu>
+   
   </el-submenu>
   
     <el-menu router mode="horizontal">
-      <el-menu-item index="/Info/Service">
+      <el-menu-item index="/Info/News">
         <i class="el-icon-menu"></i>
-        <span slot="title">服务管理</span>
+        <span slot="title">消息中心</span>
       </el-menu-item>
-        <el-menu-item index="/Info/Clerk">
+        <el-menu-item index="3">
         <i class="el-icon-menu"></i>
         <span slot="title">店员管理</span>
       </el-menu-item>
-        <el-menu-item index="/Info/Order">
+        <el-menu-item index="4">
         <i class="el-icon-menu"></i>
         <span slot="title">订单管理</span>
       </el-menu-item>
@@ -73,28 +75,41 @@
 
  
 
-    </el-aside>
+</el-aside>
+   
+    
+    <el-main>
+        
+    </el-main>
+    <router-view></router-view> 
+  
 
 
-
-    <el-container>
-        <router-view></router-view>
-     
-    </el-container>
-  </el-container>
 </el-container>
+
+
+
 </template>
 
 <script>
 export default {
-    
-}
+  //  methods: {
+  //      data() {
+  //   return {
+  //     activeIndex: '1',
+  //     activeIndex2: '1'
+  //   };
+  // },
+  methods: {
+    handleSelect(key, keyPath) {
+      console.log(key, keyPath);
+    }
+  }
+  
+};
 </script>
 
 <style>
-
-    .bac{
-        margin-left: 20px;
-    }
 </style>
+
 

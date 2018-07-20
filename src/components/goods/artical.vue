@@ -1,10 +1,10 @@
 <template>
-    <div>1</div>
+   <div>用品</div>
 </template>
 
 <script>
     export default{
-
+       
     }
 </script>
 <style>

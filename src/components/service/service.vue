@@ -1,10 +1,10 @@
 <template>
-    <div>1</div>
+   <div>服务管理</div>
 </template>
 
 <script>
     export default{
-
+       
     }
 </script>
 <style>
