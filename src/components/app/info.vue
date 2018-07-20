@@ -1,5 +1,5 @@
 <template>
-    <div>1</div>
+    <div>登录成功界面</div>
 </template>
 
 <script>
